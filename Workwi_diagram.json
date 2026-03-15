@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -57.6, "left": 81.64, "attrs": {} },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": 1.5,
+      "left": -263.3,
+      "attrs": { "distance": "318" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -112,
+      "left": -402.4,
+      "attrs": {}
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": 17.2, "left": 316.8, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 246, "left": -53.8, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -233.6,
+      "left": 312.8,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir1",
+      "top": -245.6,
+      "left": -228.18,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 263.15,
+      "left": -144,
+      "attrs": { "value": "220000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "ultrasonic1:VCC", "esp:5V", "red", [ "v48", "h0", "v19.2", "h86.4", "v105.6" ] ],
+    [ "ultrasonic1:TRIG", "esp:5", "blue", [ "v-28.8", "h-0.4", "v144", "h412.8", "v-153.6" ] ],
+    [ "ultrasonic1:ECHO", "esp:18", "limegreen", [ "v134.4", "h431.2", "v-182.4", "h-76.8" ] ],
+    [ "ultrasonic1:GND", "esp:CMD", "black", [ "v0" ] ],
+    [ "lcd1:GND", "esp:GND.2", "black", [ "h-57.6", "v134.4" ] ],
+    [ "lcd1:SDA", "esp:21", "yellow", [ "h-48", "v163.4" ] ],
+    [ "lcd1:SCL", "esp:22", "white", [ "h-38.4", "v125.1" ] ],
+    [ "pir1:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "pir1:GND", "esp:GND.2", "black", [ "v0", "h220.54" ] ],
+    [ "lcd1:VCC", "esp:5V", "red", [ "h-38.4", "v393.7", "h-249.6", "v-57.6" ] ],
+    [ "servo1:GND", "esp:GND.2", "black", [ "h-19.2", "v-96" ] ],
+    [
+      "servo1:V+",
+      "esp:5V",
+
