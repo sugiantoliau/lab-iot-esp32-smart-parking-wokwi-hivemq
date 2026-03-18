@@ -1,10 +1,10 @@
 
 ### **🛠 Project Overview**
 
-Title: IoT-Based Room Electricity Control System using Person Counting and Motion Detection
+Title: IoT-Simulation of Edge Processing Implementation for Smart Parking Gate Systems via Wokwi
 
 Description: 
-This project focuses on the design and implementation of an intelligent IoT system aimed at optimizing electricity consumption within a room through a dual-sensor approach. By combining Ultrasonic sensors for bidirectional person counting and PIR sensors for motion detection, the system creates a reliable automation logic that ensures power is only active when the room is truly occupied. This data is visualized using Blynk, transforming raw sensor inputs into a real-time mobile dashboard that displays live occupancy counts, motion status alerts, and a remote relay override, effectively bridging the gap between physical hardware automation and user-friendly cloud monitoring.
+This ESP32-based Smart Parking System simulated on Wokwi uses Edge Processing to ensure low-latency gate control and lighting automation, bypassing internet dependency for core logic. The system integrates Ultrasonic, PIR, and LDR sensors to manage a Servo gate and LED lighting, displaying real-time status on a 16x2 LCD. For remote monitoring, processed data is published to a HiveMQ cloud dashboard via the MQTT protocol.
 
 <br>
 
